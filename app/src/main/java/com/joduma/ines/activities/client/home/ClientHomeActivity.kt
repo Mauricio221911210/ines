@@ -14,6 +14,7 @@ import com.google.android.material.navigation.NavigationView
 import com.google.gson.Gson
 import com.joduma.ines.MainActivity
 import com.joduma.ines.R
+import com.joduma.ines.activities.RegisterActivity
 import com.joduma.ines.activities.RegisterClieActivity
 import com.joduma.ines.activities.RegisterProActivity
 import com.joduma.ines.activities.RegisterProvActivity
@@ -64,7 +65,7 @@ class ClientHomeActivity : AppCompatActivity() {
     }
 
     private fun user(){
-        val i = Intent(this, RegisterClieActivity::class.java)
+        val i = Intent(this, RegisterActivity::class.java)
         startActivity(i)
     }
 
