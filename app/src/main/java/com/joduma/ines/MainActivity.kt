@@ -15,14 +15,19 @@ import com.joduma.ines.activities.RegisterActivity
 import com.joduma.ines.activities.RegisterClieActivity
 import com.joduma.ines.activities.RegisterProActivity
 import com.joduma.ines.activities.RegisterProvActivity
+import com.joduma.ines.activities.client.home.ClientHomeActivity
 import com.joduma.ines.models.ResponseHttp
+import com.joduma.ines.models.User
 import com.joduma.ines.providers.UsersProvider
+import com.joduma.ines.utils.SharedPref
 
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
+
+    private var prefs: SharedPref? = null
 
     var imageViewGoToRegister: ImageView? = null
     var editTextEmail: EditText? = null
@@ -36,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        imageViewGoToRegister = findViewById(R.id.imageview_got_to_register)
+
         editTextEmail = findViewById(R.id.edittext_email)
         editTextUsername = findViewById(R.id.edittext_username)
         editTextPassword = findViewById(R.id.edittext_password)
@@ -44,7 +49,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        imageViewGoToRegister = findViewById(R.id.imageview_got_to_register)
         imageViewGoToRegister?.setOnClickListener { goToRegister() }
         buttonLogin?.setOnClickListener { login() }
 
@@ -67,6 +71,9 @@ class MainActivity : AppCompatActivity() {
                 ) {
                     Log.d("MainActivity", "Response : ${response.body()}")
 
+                   /* saveUserInSession(response.body()?.user.toString())*/
+                    goToCLientHome()
+
 
 
                 }
@@ -87,6 +94,18 @@ class MainActivity : AppCompatActivity() {
 
         /* Log.d("MainActivity", "El username es: $username")
          Log.d("MainActivity", "El password es: $password")*/
+    }
+
+    private fun goToCLientHome(){
+        val i = Intent(this, ClientHomeActivity::class.java)
+        startActivity(i)
+    }
+
+    private fun saveUserInSession(data: String) {
+        val sharedPref = SharedPref (this)
+        val gson = Gson()
+        val user = gson.fromJson(data, User::class.java)
+        sharedPref.save("user", user)
     }
 
 
