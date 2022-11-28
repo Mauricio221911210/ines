@@ -1,6 +1,7 @@
 package com.joduma.ines.models
 
 import android.location.Address
+import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
 
 class Client(
@@ -14,5 +15,9 @@ class Client(
 
     override fun toString(): String {
         return "Client(id=$id, name='$name', lastname='$lastname', phone='$phone', address=$address, user_id='$user_id')"
+    }
+
+    fun toJson(): String{
+        return Gson().toJson(this)
     }
 }

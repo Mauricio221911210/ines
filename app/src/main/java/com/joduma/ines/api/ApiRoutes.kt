@@ -1,5 +1,6 @@
 package com.joduma.ines.api
 
+import com.joduma.ines.routes.ClientRoutes
 import com.joduma.ines.routes.UsersRoutes
 
 
@@ -9,5 +10,9 @@ class ApiRoutes {
 
     fun getUsersRoutes(): UsersRoutes {
         return retrofit.getCliente(API_URL).create(UsersRoutes::class.java)
+    }
+
+    fun getClientsRoutes(): ClientRoutes {
+        return retrofit.getCliente(API_URL).create(ClientRoutes::class.java)
     }
 }
