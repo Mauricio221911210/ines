@@ -59,8 +59,6 @@ class RegisterProActivity : AppCompatActivity() {
 
         imageViewGoToMenu = findViewById(R.id.imageview_go_to_menu)
         imageViewGoToMenu?.setOnClickListener{ goToMenu() }
-        imageViewGoToList = findViewById(R.id.imageview_go_to_list)
-        imageViewGoToList?.setOnClickListener{ goToList() }
         buttonRegisterPro?.setOnClickListener { registerpro() }
 
 
