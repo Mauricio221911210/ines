@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegisterProActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registro de Productos"
+            android:textSize="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:fontFamily="@font/indigo_daisy"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingresa los datos del Producto"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto_regular" />
+
+        <EditText
+            android:id="@+id/edittext_code"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edittext_custom"
+            android:hint="Codigo"
+            android:inputType="text"
+            android:padding="15dp" />
+
+        <EditText
+            android:id="@+id/edittext_description"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Descripcion"
+            android:background="@drawable/edittext_custom"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="15dp"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/edittext_provider"
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Provedor"
+            android:background="@drawable/edittext_custom"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="15dp"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/edittext_precio_provider"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Precio Provedor"
+            android:background="@drawable/edittext_custom"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="15dp"
+            android:inputType="number" />
+
+
+
+        <EditText
+            android:id="@+id/edittext_price"
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Precio"
+            android:background="@drawable/edittext_custom"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="15dp"
+            android:inputType="number"
+             />
+
+        <EditText
+            android:id="@+id/edittext_stock"
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Stock"
+            android:background="@drawable/edittext_custom"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="15dp"
+            android:inputType="number"
+          />
+
+
+        <EditText
+            android:id="@+id/edittext_user_id"
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="id de usuario"
+            android:background="@drawable/edittext_custom"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="15dp"
+            android:inputType="number"
+             />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/btn_registerpro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrarse"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_botton"/>
+
+        <ImageView
+            android:id="@+id/imageview_go_to_menu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_left"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver al menu"
+            android:layout_marginBottom="15dp"/>
+
+        <ImageView
+            android:id="@+id/imageview_go_to_list"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_left"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver al Lista"
+            android:layout_marginBottom="15dp"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Mauricio/AndroidStudioProjects/Ines/app/src/main/res/drawable/edittext_custom.xml" value="0.1945" />
+        <entry key="..\:/Users/Mauricio/AndroidStudioProjects/Ines/app/src/main/res/drawable/ic_arrow_left.xml" value="0.1945" />
+        <entry key="..\:/Users/Mauricio/AndroidStudioProjects/Ines/app/src/main/res/drawable/ic_arrow_rigth.xml" value="0.1945" />
+        <entry key="..\:/Users/Mauricio/AndroidStudioProjects/Ines/app/src/main/res/drawable/rounded_botton.xml" value="0.1945" />
+        <entry key="..\:/Users/Mauricio/AndroidStudioProjects/Ines/app/src/main/res/layout/activity_client_home.xml" value="0.21" />
+        <entry key="..\:/Users/Mauricio/AndroidStudioProjects/Ines/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Mauricio/AndroidStudioProjects/Ines/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Users/Mauricio/AndroidStudioProjects/Ines/app/src/main/res/layout/activity_register_clie.xml" value="0.21" />
+        <entry key="..\:/Users/Mauricio/AndroidStudioProjects/Ines/app/src/main/res/layout/activity_register_pro.xml" value="0.1" />
+        <entry key="..\:/Users/Mauricio/AndroidStudioProjects/Ines/app/src/main/res/layout/activity_register_prov.xml" value="0.16530797101449277" />
+        <entry key="..\:/Users/Mauricio/Desktop/viniUltimo-master/app/src/main/res/layout/activity_client_home.xml" value="0.21" />
+        <entry key="..\:/Users/Mauricio/Desktop/viniUltimo-master/app/src/main/res/layout/activity_list_product.xml" value="0.33" />
+        <entry key="..\:/Users/Mauricio/Desktop/viniUltimo-master/app/src/main/res/layout/activity_main.xml" value="0.16530797101449277" />
+        <entry key="..\:/Users/Mauricio/Desktop/viniUltimo-master/app/src/main/res/layout/activity_register.xml" value="0.16530797101449277" />
+        <entry key="..\:/Users/Mauricio/Desktop/viniUltimo-master/app/src/main/res/layout/activity_register_clie.xml" value="0.16530797101449277" />
+        <entry key="..\:/Users/Mauricio/Desktop/viniUltimo-master/app/src/main/res/layout/activity_register_pro.xml" value="0.25" />
+        <entry key="..\:/Users/Mauricio/Desktop/viniUltimo-master/app/src/main/res/layout/activity_register_prov.xml" value="0.16530797101449277" />
+        <entry key="..\:/Users/Mauricio/Desktop/viniUltimo-master/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/client_user"
+        android:title="Perfil"
+        android:icon="@drawable/ic_user"
+
+        />
+    <item
+        android:id="@+id/client"
+        android:title="Clientes"
+        android:icon="@drawable/ic_client"
+
+        />
+    <item
+        android:id="@+id/product"
+        android:title="Productos"
+        android:icon="@drawable/ic_product"
+
+        />
+
+    <item
+        android:id="@+id/provider"
+        android:title="Proveedores"
+        android:icon="@drawable/ic_provider"
+
+        />
+
+
+</menu>
