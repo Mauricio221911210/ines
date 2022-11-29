@@ -11,7 +11,6 @@ import android.widget.Toast
 import com.joduma.ines.R
 import com.joduma.ines.activities.client.home.ClientHomeActivity
 import com.joduma.ines.models.Client
-import com.joduma.ines.models.Product
 import com.joduma.ines.models.ResponseHttp
 import com.joduma.ines.providers.UsersProvider
 import retrofit2.Call

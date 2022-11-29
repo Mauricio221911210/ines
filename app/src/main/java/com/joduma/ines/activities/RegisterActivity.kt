@@ -10,10 +10,8 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.gson.Gson
 import com.joduma.ines.MainActivity
 import com.joduma.ines.R
-import com.joduma.ines.activities.client.home.ClientHomeActivity
 import com.joduma.ines.models.ResponseHttp
 import com.joduma.ines.models.User
 import com.joduma.ines.providers.UsersProvider
@@ -35,14 +33,9 @@ class RegisterActivity : AppCompatActivity() {
 
     var usersProvider = UsersProvider()
 
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-
 
         imageViewGoToLogin = findViewById(R.id.imageview_go_to_login)
         editTextName = findViewById(R.id.edittext_name)
@@ -51,8 +44,6 @@ class RegisterActivity : AppCompatActivity() {
         editTextEmail = findViewById(R.id.edittext_email)
         editTextPassword = findViewById(R.id.edittext_password)
         buttonRegister = findViewById(R.id.btn_register)
-
-
 
         imageViewGoToLogin = findViewById(R.id.imageview_go_to_login)
         imageViewGoToLogin?.setOnClickListener{ goToLogin() }
@@ -77,16 +68,23 @@ class RegisterActivity : AppCompatActivity() {
                 username = username,
                 email = email,
                 password = password,
+                role_id = 1
             )
 
             usersProvider.register(user)?.enqueue(object: Callback<ResponseHttp> {
                 override fun onResponse(Call: Call<ResponseHttp>, response: Response<ResponseHttp>) {
-
-                    Toast.makeText( this@RegisterActivity, response.message(), Toast.LENGTH_LONG).show()
-
+                    Toast.makeText( this@RegisterActivity, "Nuevo Usuario Registrado con Éxito", Toast.LENGTH_LONG).show()
 
                     Log.d(TAG, "Response: ${response}" )
                     Log.d(TAG, "Body: ${response.body()}" )
+
+                    editTextName?.setText("")
+                    editTextLastName?.setText("")
+                    editTextUsername?.setText("")
+                    editTextEmail?.setText("")
+                    editTextPassword?.setText("")
+
+                    goToLogin()
                 }
 
                 override fun onFailure(call: Call<ResponseHttp>, t: Throwable) {
@@ -99,9 +97,6 @@ class RegisterActivity : AppCompatActivity() {
 
 
     }
-
-
-
 
     fun String.isEmailValid(): Boolean {
         return !TextUtils.isEmpty(this) && android.util.Patterns.EMAIL_ADDRESS.matcher(this).matches()
@@ -130,8 +125,6 @@ class RegisterActivity : AppCompatActivity() {
             return false
         }
 
-
-
         if (email.isBlank()) {
             Toast.makeText(this, "Debes ingresar el email", Toast.LENGTH_SHORT).show()
             return false
@@ -142,19 +135,17 @@ class RegisterActivity : AppCompatActivity() {
             return false
         }
 
-
         if (!email.isEmailValid()) {
             Toast.makeText(this, "El email no es valido", Toast.LENGTH_SHORT).show()
             return false
         }
-
 
         return true
     }
 
 
     private fun goToLogin (){
-        val i = Intent( this, ClientHomeActivity::class.java )
+        val i = Intent( this, MainActivity::class.java )
         startActivity(i)
     }
 

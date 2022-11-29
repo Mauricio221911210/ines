@@ -8,12 +8,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
-import com.joduma.ines.MainActivity
 import com.joduma.ines.R
 import com.joduma.ines.activities.client.home.ClientHomeActivity
 import com.joduma.ines.models.Product
 import com.joduma.ines.models.ResponseHttp
-import com.joduma.ines.models.User
 import com.joduma.ines.providers.UsersProvider
 import retrofit2.Call
 import retrofit2.Callback

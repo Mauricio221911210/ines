@@ -6,7 +6,6 @@ import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
 
-
 interface UsersRoutes {
     @POST( "users" )
     fun  register(@Body user: User): Call<ResponseHttp>
@@ -22,7 +21,7 @@ interface UsersRoutes {
 
 
     @FormUrlEncoded
-    @POST( "/api/login" )
+    @POST( "login" )
     fun login(@Field("username") username: String, @Field("password") password: String): Call<ResponseHttp>
 
     @Multipart

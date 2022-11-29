@@ -1,21 +1,13 @@
 package com.joduma.ines.providers
 
 
-import com.google.android.gms.common.api.Api
 import com.joduma.ines.api.ApiRoutes
 import com.joduma.ines.models.*
 import com.joduma.ines.routes.UsersRoutes
-import okhttp3.MediaType
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
 import retrofit2.Call
-import java.io.File
 
 class UsersProvider {
     private var usersRoutes: UsersRoutes? = null
-
-
-
 
     init {
         val  api = ApiRoutes()

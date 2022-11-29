@@ -56,11 +56,6 @@
             android:background="@drawable/edittext_custom"
             />
 
-
-
-
-
-
     </LinearLayout>
 
     <LinearLayout
@@ -69,6 +64,7 @@
         android:orientation="vertical"
         android:layout_gravity="bottom"
         android:gravity="center">
+
         <Button
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
@@ -78,9 +74,20 @@
             android:text="INICIAR SESION"
             android:layout_marginTop="200dp"
             android:backgroundTint="@color/green"
-            android:background="@drawable/rounded_botton"
-            />
+            android:background="@drawable/rounded_botton" />
 
+        <ImageView
+            android:id="@+id/imageview_got_to_register"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_rigth"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrate aqui"
+            android:layout_marginBottom="25dp"/>
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
