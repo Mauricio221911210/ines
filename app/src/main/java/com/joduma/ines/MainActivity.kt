@@ -11,7 +11,6 @@ import android.widget.Toast
 import com.google.gson.Gson
 import com.joduma.ines.activities.RegisterActivity
 import com.joduma.ines.activities.admin.home.AdminHomeActivity
-import com.joduma.ines.activities.client.home.ClientHomeActivity
 import com.joduma.ines.models.ResponseHttp
 import com.joduma.ines.models.User
 import com.joduma.ines.providers.UsersProvider

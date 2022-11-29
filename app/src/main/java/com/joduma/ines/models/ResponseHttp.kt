@@ -10,6 +10,6 @@ class ResponseHttp (
     @SerializedName("message") val message: String
 ) {
     override fun toString(): String {
-        return "ResponseHttp(user=$user, token='$token')"
+        return "ResponseHttp(user=$user, token='$token', message='$message')"
     }
 }
