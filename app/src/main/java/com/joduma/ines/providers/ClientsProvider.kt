@@ -17,8 +17,7 @@ class ClientsProvider {
         clientRoutes = api.getClientsRoutes();
     }
 
-    fun create(client: Client): Call<ResponseHttp>? {
-        val requestBody = RequestBody.create(MediaType.parse("text/plain"), client.toJson())
-        return clientRoutes?.create(requestBody)
+    fun index(): Call<ArrayList<Client>>? {
+        return clientRoutes?.index()
     }
 }

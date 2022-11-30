@@ -74,6 +74,7 @@ class AdminUpdateActivity : AppCompatActivity() {
                         Toast.LENGTH_LONG
                     ).show()
                     saveUserInSession(response.body()?.user.toString())
+                    gotToProfile()
                 }
 
                 override fun onFailure(p0: Call<ResponseHttp>, t: Throwable) {
@@ -98,7 +99,7 @@ class AdminUpdateActivity : AppCompatActivity() {
     }
 
     private fun gotToProfile(){
-        val i = Intent(this, ProfileFragment::class.java)
+        val i = Intent(this, AdminHomeActivity::class.java)
         startActivity(i)
     }
 

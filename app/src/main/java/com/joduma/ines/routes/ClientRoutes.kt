@@ -8,10 +8,7 @@ import retrofit2.http.*
 
 interface ClientRoutes {
 
-    @Multipart
-    @POST("/clients")
-    fun create (
-        @Part("client") client: RequestBody
-    ): Call<ResponseHttp>
+    @GET("clients")
+    fun index (): Call<ArrayList<Client>>
 
 }

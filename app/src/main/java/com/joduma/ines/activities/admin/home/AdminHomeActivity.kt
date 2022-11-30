@@ -34,7 +34,7 @@ class AdminHomeActivity : AppCompatActivity() {
         buttonLogout?.setOnClickListener{
             logout()
         }*/
-        openFragment(ProductsFragment())
+        openFragment(ProfileFragment())
         bottomNavigation = findViewById(R.id.bottom_navigation)
         bottomNavigation?.setOnItemSelectedListener {
             when (it.itemId){
