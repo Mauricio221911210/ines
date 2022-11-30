@@ -121,25 +121,13 @@ class MainActivity : AppCompatActivity() {
         sharedPref.save("user", user)
     }
 
-
-    // fun String.isUsernameValid(): Boolean {
-    //   return !TextUtils.isEmpty(this) && android.util.Patterns.EMAIL_ADDRESS.matcher(this).matches()
-    //}
-
     private fun isValidForm(username: String, password: String): Boolean {
-
         if (username.isBlank()) {
             return false
         }
-
         if (password.isBlank()) {
             return false
         }
-
-        /* if (!username.isUsernameValid()) {
-             return false
-         }*/
-
         return true
     }
 

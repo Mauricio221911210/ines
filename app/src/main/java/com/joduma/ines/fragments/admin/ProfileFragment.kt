@@ -70,7 +70,7 @@ class ProfileFragment : Fragment() {
     }
 
     private fun goToUpdateProfile (){
-        val i = Intent( requireActivity(), AdminUpdateActivity::class.java )
+        val i = Intent( requireContext(), AdminUpdateActivity::class.java )
         startActivity(i)
     }
 }

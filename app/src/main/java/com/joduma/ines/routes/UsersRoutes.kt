@@ -10,6 +10,9 @@ interface UsersRoutes {
     @POST( "users" )
     fun  register(@Body user: User): Call<ResponseHttp>
 
+    @PUT("users/{id}")
+    fun  update(@Body user: User, @Path("id") userId: Long): Call<ResponseHttp>
+
     @POST( "/providers" )
     fun  provider(@Body provider: Provider): Call<ResponseHttp>
 
@@ -23,13 +26,5 @@ interface UsersRoutes {
     @FormUrlEncoded
     @POST( "login" )
     fun login(@Field("username") username: String, @Field("password") password: String): Call<ResponseHttp>
-
-    @Multipart
-    @PUT("users/update")
-    fun update (
-        @Part image: MultipartBody.Part,
-        @Part("user") user: RequestBody
-
-    ): Call<ResponseHttp>
 
 }

@@ -18,6 +18,10 @@ class UsersProvider {
         return usersRoutes?.register(user)
     }
 
+    fun update( user: User, userId: Long ): Call<ResponseHttp>?{
+        return usersRoutes?.update(user, userId)
+    }
+
     fun product(product: Product): Call<ResponseHttp>? {
         return usersRoutes?.product(product)
     }
