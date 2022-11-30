@@ -15,8 +15,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:fontFamily="@font/catalish_huntera"
+            android:text="Inicio de Sesion"
+            android:fontFamily="@font/EmiliaKerenDemo"
             android:textSize="50sp"
             android:layout_marginTop="60dp"
             android:layout_marginLeft="25dp"/>
@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ingresa con tu username y contraseña"
+            android:text="Ingresa con tu nombre de usuario y contraseña"
             android:fontFamily="@font/roboto_regular"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="5dp" />
@@ -33,7 +33,7 @@
             android:id="@+id/edittext_username"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Username"
+            android:hint="Nombre de Sesion "
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="50dp"
@@ -46,7 +46,7 @@
             android:id="@+id/edittext_password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Password"
+            android:hint="Contraseña "
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
@@ -73,7 +73,7 @@
             android:layout_marginLeft="20dp"
             android:text="INICIAR SESION"
             android:layout_marginTop="200dp"
-            android:backgroundTint="@color/green"
+            android:backgroundTint="@color/black"
             android:background="@drawable/rounded_botton" />
 
         <ImageView
@@ -81,7 +81,8 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_arrow_rigth"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            app:tint="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
