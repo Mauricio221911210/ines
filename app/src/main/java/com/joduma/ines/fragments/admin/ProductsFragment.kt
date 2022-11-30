@@ -1,60 +1,81 @@
 package com.joduma.ines.fragments.admin
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
 import com.joduma.ines.R
+import com.joduma.ines.adapters.ProductsAdapter
+import com.joduma.ines.models.Product
+import com.joduma.ines.models.User
+import com.joduma.ines.providers.ProductsProvider
+import com.joduma.ines.utils.SharedPref
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ProductsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProductsFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    val TAG = "ProductsFragment"
+    var myView: View? = null
+    var recyclerViewProducts: RecyclerView? = null
+    var productsProvider: ProductsProvider? = null
+    var adapter: ProductsAdapter? = null
+    var user: User? = null
+    var sharedPref: SharedPref? = null
+    var products = ArrayList<Product>()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_products, container, false)
+        myView = inflater.inflate(R.layout.fragment_products, container, false)
+
+        recyclerViewProducts = myView?.findViewById(R.id.recyclerview_products)
+        recyclerViewProducts?.layoutManager = LinearLayoutManager(requireContext())
+        sharedPref = SharedPref(requireActivity())
+
+        getUserFromSession()
+
+        productsProvider = ProductsProvider()
+
+        getProducts()
+        return myView
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ProductsFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ProductsFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    private fun getProducts(){
+        productsProvider?.index()?.enqueue(object: Callback<ArrayList<Product>>{
+            override fun onResponse(
+                call: Call<ArrayList<Product>>,
+                response: Response<ArrayList<Product>>
+            ) {
+                if(response.body() != null){
+                    products = response.body()!!
+                    adapter = ProductsAdapter(requireActivity(), products)
+                    recyclerViewProducts?.adapter = adapter
                 }
             }
+
+            override fun onFailure(call: Call<ArrayList<Product>>, t: Throwable) {
+                Log.d(TAG, "Error: ${t.message}")
+                Toast.makeText(requireContext(), "Error: ${t.message}", Toast.LENGTH_LONG).show()
+            }
+        })
+    }
+
+    private fun getUserFromSession(){
+        val gson = Gson()
+
+        if(!sharedPref?.getData("user").isNullOrBlank()){
+            val user = gson.fromJson(sharedPref?.getData("user"), User::class.java)
+            Log.d(TAG, "Usuario: $user")
+        }
     }
 }
