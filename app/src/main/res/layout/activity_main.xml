@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Inicio de Sesion"
-            android:fontFamily="@font/EmiliaKerenDemo"
+            android:fontFamily="@font/emilia_keren_demo"
             android:textSize="50sp"
             android:layout_marginTop="60dp"
             android:layout_marginLeft="25dp"/>

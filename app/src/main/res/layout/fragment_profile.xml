@@ -15,7 +15,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:src="@drawable/ic_account"
-            app:civ_border_color="@color/green"
+            app:civ_border_color="@color/gray"
             app:civ_border_width="5dp"
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
@@ -119,7 +119,7 @@
             android:layout_gravity="center"
             android:text="Actualizar Información"
             android:background="@drawable/rounded_botton"
-            android:backgroundTint="@color/green"
+            android:backgroundTint="@color/gray"
             android:layout_marginBottom="170dp"/>
         
     </LinearLayout>

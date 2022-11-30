@@ -68,8 +68,9 @@ class RegisterActivity : AppCompatActivity() {
                 username = username,
                 email = email,
                 password = password,
-                role_id = 1
             )
+
+            Log.d(TAG, "user : $user")
 
             usersProvider.register(user)?.enqueue(object: Callback<ResponseHttp> {
                 override fun onResponse(Call: Call<ResponseHttp>, response: Response<ResponseHttp>) {

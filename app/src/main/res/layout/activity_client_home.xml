@@ -14,7 +14,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="350dp"
         app:srcCompat="@drawable/ic_provider"
-        app:tint="@color/green"
+        app:tint="@color/black"
         />
 
     <TextView
@@ -45,7 +45,7 @@
         android:layout_marginRight="15dp"
         android:layout_marginTop="350dp"
         app:srcCompat="@drawable/ic_product"
-        app:tint="@color/green"/>
+        app:tint="@color/black"/>
 
     <ImageView
         android:id="@+id/user_cli"
@@ -55,7 +55,7 @@
         android:layout_marginRight="15dp"
         android:layout_marginTop="150dp"
         app:srcCompat="@drawable/ic_client"
-        app:tint="@color/green"/>
+        app:tint="@color/black"/>
     <TextView
         android:layout_width="102dp"
         android:layout_height="20dp"
@@ -83,7 +83,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="150dp"
         app:srcCompat="@drawable/ic_user"
-        app:tint="@color/green"
+        app:tint="@color/black"
         />
 
     <LinearLayout
