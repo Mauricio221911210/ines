@@ -16,10 +16,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registro de Productos"
-            android:textSize="50dp"
+            android:textSize="35dp"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="25dp"
-            android:fontFamily="@font/indigo_daisy"
+            android:fontFamily="@font/EmiliaKerenDemo"
             />
 
         <TextView
@@ -150,7 +150,8 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_arrow_left"
-            android:layout_marginTop="15dp"/>
+            android:layout_marginTop="15dp"
+            app:tint="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
